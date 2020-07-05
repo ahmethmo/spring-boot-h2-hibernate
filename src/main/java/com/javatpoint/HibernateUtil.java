@@ -39,6 +39,7 @@ public class HibernateUtil {
 			p.setProperty("hibernate.connection.username", 		pro.getProperty("spring.datasource.username"));
 			p.setProperty("hibernate.connection.password", 		pro.getProperty("spring.datasource.password"));
 			p.setProperty("hibernate.connection.url", 			pro.getProperty("spring.datasource.url"));
+			p.setProperty("show_sql", 							"true");
 			conf.setProperties(p);
 			conf.addAnnotatedClass(Bilet.class);
 			conf.addAnnotatedClass(Firma.class);

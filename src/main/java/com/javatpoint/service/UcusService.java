@@ -66,9 +66,6 @@ public class UcusService{
 			if (t.getId() != null) {
 				criteria.add(cb.equal(rootEntity.get("id"), t.getId()));
 			}
-			if (t.getRota() != null && t.getRota().getKalkis() != null && t.getRota().getKalkis().getId() != null ) {
-				criteria.add(cb.equal(rootEntity.get("rota").get("kalkis").get("id"), t.getRota().getKalkis().getId()));
-			}
 			
 			cq.select(rootEntity).where(criteria.toArray(new Predicate[] {}));
 			result =ses.createQuery(cq).getResultList();
